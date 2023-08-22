@@ -11,3 +11,10 @@
 import Navigation from "./layouts/Navigation.vue";
 //
 </script>
+
+<style>
+* {
+  font-family: "Montserrat", sans-serif;
+  font-family: "Open Sans", sans-serif;
+}
+</style>
