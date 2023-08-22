@@ -3,7 +3,7 @@
     <Transition name="modal-outer">
     <div v-show="modalActive">
       <Transition name="modal-inner">
-        <v-card class="w-75" id="card" v-if="modalActive" elevation="8">
+        <v-card class="modal" id="card" v-if="modalActive" elevation="8">
           <slot />
 
           <v-card-actions class="d-flex justify-end">
@@ -36,6 +36,9 @@ defineProps({
   left: 0;
   right: 0;
   margin: auto;
+}
+.modal {
+  width: 90vw;
 }
 
 /* model outer stylings */

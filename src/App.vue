@@ -1,7 +1,7 @@
 <template>
   <v-app>
     <Navigation />
-    <v-main>
+    <v-main class="bg-secondary text-white fill-height">
       <router-view />
     </v-main>
   </v-app>

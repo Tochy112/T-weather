@@ -1,9 +1,9 @@
 <template>
   <nav>
     <v-app-bar elevation="3">
-      <RouterLink :to="{ name: 'Home' }" class="route">
+      <RouterLink :to="{ name: 'home' }" class="route">
         <v-app-bar-title class="ma-10 text-secondary">
-          T-weather
+          t-weda
           <v-icon>mdi-weather-partly-lightning</v-icon>
         </v-app-bar-title>
       </RouterLink>
@@ -12,19 +12,19 @@
         <v-icon @click="toggleModalActive" class="mx-1 text-secondary hover"
           >mdi-information</v-icon
         >
-        <v-icon class="text-secondary hover">mdi-plus</v-icon>
+        <v-icon class="text-secondary hover" @click="comingSoonFn">mdi-plus</v-icon>
       </div>
       <!-- <v-app-bar-nav-icon /> -->
     </v-app-bar>
 
     <BaseModal :modalActive="modalActive" @close-modal="toggleModalActive">
       <v-card-text>
-        <h2 class="mb-1">About:</h2>
+        <h2 class="mb-1 text-secondary">About:</h2>
         <p class="mb-4">
           The Local Weather allows you to track the current and future weather
           of cities of your choosing.
         </p>
-        <h2 class="mb-1">How it works:</h2>
+        <h2 class="mb-1 text-secondary">How it works:</h2>
         <ol class="pa-4">
           <li>
             Search for your city by entering the name into the search bar.
@@ -39,7 +39,7 @@
           </li>
         </ol>
 
-        <h2 class="mb-1">Removing a city</h2>
+        <h2 class="mb-1 text-secondary">Removing a city</h2>
         <p>
           If you no longer wish to track a city, simply select the city within
           the home page. At the bottom of the page, there will be an option to
@@ -55,6 +55,12 @@ import BaseModal from "@/components/BaseModal.vue";
 import { ref } from "vue";
 import { RouterLink } from "vue-router";
 
+const feature = ref("")
+const comingSoonFn = () => {
+  alert(feature.value="coming soon")
+}
+
+// modal toggle
 const modalActive = ref(false);
 const toggleModalActive = () => {
   modalActive.value = !modalActive.value;
