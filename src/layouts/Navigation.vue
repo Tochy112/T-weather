@@ -19,19 +19,14 @@
 
     <BaseModal :modalActive="modalActive" @close-modal="toggleModalActive">
       <v-card-text>
-        <h2 class="mb-1 text-secondary">About:</h2>
-        <p class="mb-4">
-          The Local Weather allows you to track the current and future weather
-          of cities of your choosing.
-        </p>
-        <h2 class="mb-1 text-secondary">How it works:</h2>
+        <h2 class="mb-2 text-secondary">How it works</h2>
         <ol class="pa-4">
           <li>
             Search for your city by entering the name into the search bar.
           </li>
           <li>
             Select a city within the results, this will take you to the current
-            weather for your selection.
+            weather of your selection.
           </li>
           <li>
             Track the city by clicking on the "+" icon in the top right. This
@@ -39,11 +34,9 @@
           </li>
         </ol>
 
-        <h2 class="mb-1 text-secondary">Removing a city</h2>
+        <h2 class="mb-2 text-secondary">Removing a city</h2>
         <p>
-          If you no longer wish to track a city, simply select the city within
-          the home page. At the bottom of the page, there will be an option to
-          delete the city.
+          If you no longer wish to track a city, simply select the city and click on the delete button.
         </p>
       </v-card-text>
     </BaseModal>

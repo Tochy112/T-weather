@@ -29,10 +29,10 @@
       }}
     </p>
 
-    <h1 class="mb-8">{{ Math.round(weatherData.current.temp) }}&deg;</h1>
+    <h1 class="mb-8">{{ Math.round(weatherData.current.temp) }}&deg;F</h1>
     <p>
       Feels like
-      {{ Math.round(weatherData.current.feels_like) }} &deg;
+      {{ Math.round(weatherData.current.feels_like) }} &deg;F
     </p>
     <h3>
       {{ weatherData.current.weather[0].description }}
@@ -51,7 +51,7 @@
 
   <!-- hourly weather -->
   <v-container class="text-white text-center">
-    <h3>Hourly Weather</h3>
+    <h2>Hourly Weather</h2>
 
     <div class="container d-flex my-4 py-4">
       <div v-for="hourData in weatherData.hourly" :key="hourData.dt">
@@ -156,10 +156,6 @@ h1 {
 .container, .contain {
   overflow-x: scroll;
 }
-.container::-webkit-scrollbar,
-.contain::-webkit-scrollbar {
-  height: 1px;
-  width: 20px;
-  background: #ec6e4c;
-}
+
+
 </style>

@@ -8,7 +8,7 @@
 
           <v-card-actions class="d-flex justify-end">
             <v-btn
-              class="bg-secondary"
+              class="bg-secondary btn"
               elevation="1"
               @click="$emit('close-modal')"
               >close</v-btn
@@ -39,6 +39,10 @@ defineProps({
 }
 .modal {
   width: 90vw;
+}
+
+.btn {
+  color: #fff !important;
 }
 
 /* model outer stylings */
